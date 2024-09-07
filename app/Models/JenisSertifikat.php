@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Program extends Model
+class JenisSertifikat extends Model
 {
     use HasFactory;
 
@@ -15,7 +15,7 @@ class Program extends Model
      *
      * @var string
      */
-    protected $table = 'program';
+    protected $table = 'jenis_sertifikat';
 
     /**
      * Indicates if the model should be timestamped.
@@ -32,7 +32,10 @@ class Program extends Model
     protected $fillable = [
         'nama',
         'batch',
+        'mitra',
         'pelaksanaan',
+        'flyer',
+        'open',
     ];
 
     /**
@@ -44,11 +47,17 @@ class Program extends Model
     {
         return [
             'pelaksanaan' => 'date',
+            'open' => 'boolean',
         ];
     }
 
     public function sertifikat(): HasMany
     {
         return $this->hasMany(Sertifikat::class);
+    }
+
+    public function pendaftaran(): HasMany
+    {
+        return $this->hasMany(Pendaftaran::class);
     }
 }

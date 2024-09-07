@@ -31,6 +31,7 @@ class Peserta extends Model
      */
     protected $fillable = [
         'npm',
+        'nik',
         'name',
         'email',
         'telepon',
@@ -40,5 +41,10 @@ class Peserta extends Model
     public function sertifikat(): HasMany
     {
         return $this->hasMany(Sertifikat::class);
+    }
+
+    public function pendaftaran(): HasMany
+    {
+        return $this->hasMany(Pendaftaran::class);
     }
 }

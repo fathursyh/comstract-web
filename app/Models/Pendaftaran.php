@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Sertifikat extends Model
+class Pendaftaran extends Model
 {
     use HasFactory;
 
@@ -15,7 +15,7 @@ class Sertifikat extends Model
      *
      * @var string
      */
-    protected $table = 'sertifikat';
+    protected $table = 'pendaftaran';
 
     /**
      * Indicates if the model should be timestamped.
@@ -30,11 +30,10 @@ class Sertifikat extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'kode',
         'peserta_id',
-        'program_id',
-        'filename',
-        'expired',
+        'jenis_sertifikat_id',
+        'status_pembayaran',
+        'lulus',
     ];
 
     /**
@@ -45,7 +44,8 @@ class Sertifikat extends Model
     protected function casts(): array
     {
         return [
-            'expired' => 'date',
+            'status_pembayaran' => 'boolean',
+            'lulus' => 'boolean',
         ];
     }
 
