@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Artikel::class);
-            $table->string('filename');
+            $table->string('filename')->unique();
         });
     }
 
