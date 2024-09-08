@@ -2,91 +2,45 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Artikel;
 use Illuminate\Http\Request;
+use App\Models\Artikel;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ArtikelController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        return view('page.artikel');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view();
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Handle storing a new article.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $validasi = $request->validate([
-            'title' => 'required|min:16|max:255',
-            'slug' => 'required|max:255', 
-            'excerpt' => 'required',
-            'body' => 'required',
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'excerpt' => 'nullable|string|max:255',
+            'body' => 'required|string',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
-        Artikel::create($validasi);
+        $slug = Str::slug($request->input('title'));
 
-        return redirect()->route('artikel.index');
-    }
+        $artikelData = [
+            'user_id' => Auth::id(),
+            'title' => $request->input('title'),
+            'slug' => $slug,
+            'excerpt' => $request->input('excerpt'),
+            'body' => $request->input('body'),
+        ];
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        $artikel = Artikel::find($id);
-        return view('artikel.show', compact('artikel'));
-    }
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('images', 'public');
+            $artikelData['image_path'] = $imagePath;
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        $artikel = Artikel::find($id);
-        return view('artikel.edit', compact('artikel'));
-    }
+        $artikel = Artikel::create($artikelData);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        $validatedData = $request->validate([
-            'title' => 'required|min:16|max:255',
-            'slug' => 'required|max:255|unique:artikels,slug,' . $id,
-            'excerpt' => 'required',
-            'body' => 'required',
-        ]);
-
-        $artikel = Artikel::findOrFail($id);
-
-        $artikel->update($validatedData);
-
-        return redirect()->route('artikel.index');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        $artikel = Artikel::findOrFail($id);
-
-        $artikel->delete();
-
-        return redirect()->route('artikel.index');
+        return redirect()->route('');
     }
 }

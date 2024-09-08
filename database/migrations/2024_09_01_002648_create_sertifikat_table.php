@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\JenisSertifikat;
 use App\Models\Peserta;
-use App\Models\Program;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,9 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('kode', 100)->unique();
             $table->foreignIdFor(Peserta::class);
-            $table->foreignIdFor(Program::class);
+            $table->foreignIdFor(JenisSertifikat::class);
             $table->string('filename')->unique();
             $table->date('expired')->nullable();
+            $table->enum('tipe', ['attendance', 'kelulusan']);
         });
     }
 

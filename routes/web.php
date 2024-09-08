@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,7 +8,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/artikel',[ArtikelController::class,'index'])->name('halamanArtikel');
-Route::get('/artikelCari/{id}',[ArtikelController::class])->name('cariArtikel');
-Route::put('/artikelEdit/{id}',[ArtikelController::class,'update'])->name('editArtikel');
-Route::delete('/artikelHapus/{id}',[ArtikelController::class,'destroy'])->name('deleteArtikel');
+Route::post('/register', [UserController::class, 'store'])->name('register');
+Route::post('/login', [UserController::class, 'login'])->name('login.submit');
+
+Route::get('/pageregister', [UserController::class, 'index'])->name('registers');
+Route::get('/pagelogin', [UserController::class, 'indexs'])->name('logins');
