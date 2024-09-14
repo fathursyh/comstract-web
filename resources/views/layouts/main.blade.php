@@ -10,8 +10,9 @@
 <body>
   {{-- NAVBAR --}}
   @include('components.navbar')
-  
-  {{-- CAROUSEL EVENTS --}}
-
+  <div class="container pt-24 h-100 max-w-full">
+    @yield('content')
+  </div>
+  <script src="{{ URL::to('/') }}/js/main.js"></script>
 </body>
 </html>
