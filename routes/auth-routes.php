@@ -2,12 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
-// LOGIN PAGE
-Route::get('/login', function () {
-  return view('login/index');
-})->middleware('guest')->name('login');
+Route::middleware('guest')->group(function() {
+  // LOGIN PAGE
+  Route::get('/login', function () {
+    return view('login/index');
+  })->name('login');
 
-// REGISTER PAGE
-Route::get('/register', function () {
-  return view('register/index');
-})->middleware('guest')->name('register');
+  // ******************************************************
+  
+  // REGISTER PAGE
+  Route::get('/register', function () {
+    return view('register/index');
+  })->name('register');
+});

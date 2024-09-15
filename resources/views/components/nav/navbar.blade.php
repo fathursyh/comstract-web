@@ -10,7 +10,7 @@
             {{-- VISITOR --}}
             @guest
                 <button onclick="changeURL('/login')" 
-                  class="flex items-center justify-between w-full py-2 px-3 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-green-600 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-medium">
+                  class="flex items-center justify-between w-full py-2 px-3 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-green-600 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                   Login Admin <img src="{{ URL::to('/') }}/assets/login.png" alt="" width="30px" class="md:ms-2">
                 </button>
             @endguest
@@ -54,9 +54,9 @@
                         Kami</a>
                 </li>
             {{-- CUMA MUNCUL BUAT ADMIN --}}    
-            @auth
+            {{-- @auth --}}
                 <li>
-                    <button data-page="data-peserta" id="dropdownNavbarLink" data-dropdown-toggle="dropdownUser"
+                    <button data-page="data-peserta" id="dropdownNavbarLink" data-dropdown-toggle="dropdownPeserta"
                         class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Data
                         Peserta <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 10 6">
@@ -64,12 +64,12 @@
                                 d="m1 1 4 4 4-4" />
                         </svg></button>
                     <!-- Dropdown menu -->
-                    <div id="dropdownUser"
+                    <div id="dropdownPeserta"
                         class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                         @include('components.nav.nav-peserta')
                     </div>
                 </li>
-            @endauth
+            {{-- @endauth --}}
                 <li>
                     {{-- AKUN DAN LOGIN MOBILE --}}
                     @guest
