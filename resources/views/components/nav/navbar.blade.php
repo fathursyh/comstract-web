@@ -15,7 +15,7 @@
                 </button>
             @endguest
             {{-- ADMIN --}}
-            @auth
+            {{-- @auth --}}
                 <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownUser"
                     class="flex items-center justify-between w-full py-2 px-3 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">{{ $data['username']?? 'Nama Panjang User' }} <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 10 6">
@@ -25,9 +25,9 @@
                 </button>
                 <div id="dropdownUser"
                     class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                    @include('components.nav-user')
+                    @include('components.nav.nav-user')
                 </div>
-            @endauth
+            {{-- @endauth --}}
           </div>
             <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
         <span class="sr-only"></span>
@@ -66,7 +66,7 @@
                     <!-- Dropdown menu -->
                     <div id="dropdownUser"
                         class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        @include('components.nav-peserta')
+                        @include('components.nav.nav-peserta')
                     </div>
                 </li>
             @endauth
@@ -88,7 +88,7 @@
                 <!-- Dropdown menu -->
                 <div id="dropdownNavbar"
                     class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                    @include('components.nav-user')
+                    @include('components.nav.nav-user')
                 </div>
                 @endauth
                 </li>

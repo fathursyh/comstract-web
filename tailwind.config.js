@@ -18,6 +18,10 @@ module.exports = {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
+    colors: {
+      ungu: '#DFE2F2',
+      hijau: '#00A858'
+    },
     extend: {},
   },
   plugins: [

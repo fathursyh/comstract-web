@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+require_once "auth-routes.php";
+require_once "dashboard-routes.php";
+
 Route::get('/', function () {
     // butuh data['username], data['angkatan']
     return view('home/index');
@@ -16,12 +19,3 @@ Route::get('/data-peserta', function () {
     return view('home/peserta');
 });
 
-// LOGIN PAGE
-Route::get('/login', function () {
-    return view('login/index');
-})->middleware('guest')->name('login');
-
-// REGISTER PAGE
-Route::get('/register', function () {
-    return view('register/index');
-})->middleware('guest')->name('register');
