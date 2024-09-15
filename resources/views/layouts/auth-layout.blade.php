@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Comstract</title>
+    <title>Comstract - Login</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-  {{-- NAVBAR --}}
-  @include('components.navbar')
-
-  <div class="container pt-24 h-100 max-w-full">
+    {{-- NAVBAR --}}
+    @include('components.navbar')
+    {{-- FORM --}}
     @yield('content')
-  </div>
 
   <script src="{{ asset('js/home.js') }}"></script>
 </body>
