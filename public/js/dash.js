@@ -1,5 +1,5 @@
 const selectedSideNav = () => {
-  const currentPage = window.location.pathname.slice(11);
+  const currentPage = window.location.pathname.split('/')[2]?? '';
   const menu = document.querySelectorAll('#side-nav > li > a');
   
   // NAVIGASI DASHBOARD

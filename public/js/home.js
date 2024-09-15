@@ -3,7 +3,7 @@ const changeURL = (url) => {
 }
 // WARNA BIRU NAV YANG DIPILIH
 const selectedNavItem = () => {
-    const currentPage = window.location.pathname.slice(1);
+    const currentPage = window.location.pathname.split('/')[1];
     const peserta = document.querySelector('#navigasi > li > button') || null;
     const navigasi = document.querySelectorAll('#navigasi > li > a');
     // DATA PESERTA (ADMIN)
