@@ -4,7 +4,7 @@
     {{-- DEFAULT LIST : 2020 dan 2019 --}}
     @foreach ($data['angkatan']?? ['2020', '2019'] as $item)
     <li>
-      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+      <a href="/data-peserta/{{ $item }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
         {{ $item }}
       </a>
     </li>
