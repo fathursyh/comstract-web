@@ -8,7 +8,7 @@
 </p>
 
 ## Comstract Web
-**Comstract** company website build by the team of 3 people. The web itself was built using the **Laravel** framework.
+**Comstract** company website built by the team of 3 people. The web itself was built using the **Laravel** framework.
 The website has several functions, which are :
 - administrators signin/signup
 - visitor signup
