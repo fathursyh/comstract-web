@@ -19,7 +19,8 @@ module.exports = {
   ],
   theme: {
     colors: {
-      ungu: '#DFE2F2',
+      unguTipis: '#DFE2F2',
+      ungu: '#7A75B4',
       hijau: '#00A858'
     },
     extend: {},

@@ -10,10 +10,13 @@ Route::get('/', function () {
     /* 
     data['username], data['angkatan'] -> buat navbar
     data['chart'] -> buat chart tea
-    data['posts'](limit 4 posts aja) -> buat di bagian post
-    data['images'](sebanyak admin mau) buat carousels di home
+    data['posts'](limit 4 posts aja) -> buat di bagian post sebanyak admin mau
     */
-    return view('home/index');
+    require_once 'dummy.php';
+    return view('home/index', [
+        "username" => $username,
+        "posts" => $posts
+    ]);
 });
 Route::get('/kegiatan', function () {
     return view('home/kegiatan');
