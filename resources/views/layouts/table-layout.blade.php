@@ -8,11 +8,11 @@
     }
     ?>
 
-    <h1 class="text-4xl font-bold text-hijau mt-10 mb-14 text-center">
+    <h1 class="md:text-4xl text-3xl font-bold text-hijau mt-10 mb-14 text-center">
         @yield('judul')
     </h1>
 
-    <div class="mx-auto container relative p-2 rounded-lg overflow-x-auto lg:w-4/5 mb-7">
+    <div class="mx-auto container relative p-2 rounded-lg overflow-x-auto lg:w-[95%] 2xl:w-3/4 mb-7">
         {{-- BUTTON --}}
         @yield('button')
         <table class="md:table-fixed table-auto w-full text-sm text-left rtl:text-right text-gray-800">
