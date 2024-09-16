@@ -6,9 +6,9 @@
   </svg>
 </button>
 
-<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 md:w-72 w-60 h-screen transition-transform -translate-x-full lg:translate-x-0" aria-label="Sidebar">
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 md:w-72 w-72 h-full transition-transform -translate-x-full lg:translate-x-0" aria-label="Sidebar">
   <div class="h-full px-3 py-2 overflow-y-auto bg-unguTipis flex flex-wrap justify-center items-center">
-     <ul class="space-y-2 font-medium" id="side-nav">
+     <ul class="space-y-2 font-medium text-xl lg:text-base" id="side-nav">
       {{-- LOGO DASHBOARD --}}
       <li class="mb-6">
         <a href="/">
@@ -16,7 +16,7 @@
         </a>
       </li>
         <li>
-           <a data-nav="" href="/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group">
+           <a data-nav="" href="/dashboard/sertifikasi" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group">
               <img class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true"
               src="{{ asset('assets/dash/sertifikasi.png') }}">
               <span class="ms-3">Sertifikasi</span>

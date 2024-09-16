@@ -13,13 +13,10 @@
   @include('components.nav-dashboard.dashboard_navbar')
   
   {{-- SIDE CONTENT --}}
-  <div class="p-6 lg:p-12 lg:ml-72 h-screen" id="dashboard-content">
-    <div class="grid grid-rows-3 h-full w-full place-items-center">
+  <div class="p-2 lg:p-12 lg:ml-64 h-screen" id="dashboard-content">
       @yield('content')
-      <h1>tambah dan pagination</h1>
-    </div>
   </div>
 
-  <script src="{{ asset('js/dash.js') }}"></script>
+  <script src="{{ asset('js/dashboard.js') }}"></script>
 </body>
 </html>

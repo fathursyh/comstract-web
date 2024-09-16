@@ -13,3 +13,7 @@ const selectedSideNav = () => {
 window.addEventListener('DOMContentLoaded', () => {
   selectedSideNav();
 });
+
+const changeURL = (url) => {
+  window.location.href = url;  
+}

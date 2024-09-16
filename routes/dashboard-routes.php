@@ -3,14 +3,27 @@
 use Illuminate\Support\Facades\Route;
 
 // ADMIN ONLY ACCESS
-// Route::middleware('auth')->group(function(){
-  Route::get('/dashboard', function () {
-    return view('dashboard/sertifikasi');
-  })->name('sertifikasi');
-  Route::get('/dashboard/kegiatan', function () {
-    return view('dashboard/kegiatan');
-  })->name('kegiatan');
-  Route::get('/dashboard/profile', function () {
-    return view('dashboard/profile');
-  })->name('profile');
-// });
+$dev = 'guest'; // INI GANTI KALO UDAH JADII! JADI 'auth'
+Route::group(['prefix'=> 'dashboard', 'middleware' => $dev],function(){
+    // ROUTES BUAT SERTIFIKASI
+    Route::group(['prefix' => 'sertifikasi'],function() {
+        Route::get('/', function () {
+            include 'dummy.php';
+            return view('dashboard/sertifikasi', [
+                'data' => $data1,
+            ]);
+        });
+    });
+
+    // ROUTES BUAT KEGIATAN
+    Route::group(['prefix' => 'kegiatan'],function() {
+        Route::get('/', function () {
+            return view('dashboard/kegiatan');
+        });
+    });
+
+    // ROUTES BUAT PROFILE COMSTRACT YANG BISA DIEDIT
+    Route::get('/profile', function () {
+        return view('dashboard/profile');
+    });
+});
