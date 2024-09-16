@@ -15,32 +15,87 @@ $posts = [
     ],
    ];
 
-   $username = 'Naufal Alwi Aripin';
-
    $data1 = [
     [
+    'id' => 1,
     'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
     'batch'=> 1,
     'tahun'=> 2019,
     ],
     [
-    'nama'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, aut quis at, pariatur unde dolorem impedit alias ',
-    'batch'=> 2,
-    'tahun'=> 2020,
+    'id' => 1,
+    'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
+    'batch'=> 1,
+    'tahun'=> 2019,
     ],
     [
-    'nama'=> 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo aut possimus repudiandae commodi recusandae iusto!',
-    'batch'=> 2,
-    'tahun'=> 2020,
+    'id' => 1,
+    'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
+    'batch'=> 1,
+    'tahun'=> 2019,
     ],
     [
-    'nama'=> 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo aut possimus repudiandae commodi recusandae iusto!',
-    'batch'=> 2,
-    'tahun'=> 2020,
+    'id' => 1,
+    'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
+    'batch'=> 1,
+    'tahun'=> 2019,
     ],
     [
-    'nama'=> 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo aut possimus repudiandae commodi recusandae iusto!',
-    'batch'=> 2,
-    'tahun'=> 2020,
+    'id' => 1,
+    'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
+    'batch'=> 1,
+    'tahun'=> 2019,
+    ],
+    [
+    'id' => 1,
+    'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
+    'batch'=> 1,
+    'tahun'=> 2019,
+    ],
+
+];
+
+$data2 = [
+    [
+        'id' => 1,
+        'judul'=> 'Nama Post Panjang Segini sampe bawah kalo emang panjang',
+        'slugs'=> 'Slugs-judul-bisa-sepanjang-ini-buat-url',
+        'updatedAt' => 'bebas/2007',
+        'createdAt' => 'bebas/2007',
+    ],
+    [
+        'id' => 1,
+        'judul'=> 'Nama Post Panjang Segini sampe bawah kalo emang panjang',
+        'slugs'=> 'Slugs-judul-bisa-sepanjang-ini-buat-url',
+        'updatedAt' => 'bebas/2007',
+        'createdAt' => 'bebas/2007',
+    ],
+    [
+        'id' => 1,
+        'judul'=> 'Nama Post Panjang Segini sampe bawah kalo emang panjang',
+        'slugs'=> 'Slugs-judul-bisa-sepanjang-ini-buat-url',
+        'updatedAt' => 'bebas/2007',
+        'createdAt' => 'bebas/2007',
+    ],
+    [
+        'id' => 1,
+        'judul'=> 'Nama Post Panjang Segini sampe bawah kalo emang panjang',
+        'slugs'=> 'Slugs-judul-bisa-sepanjang-ini-buat-url',
+        'updatedAt' => 'bebas/2007',
+        'createdAt' => 'bebas/2007',
+    ],
+    [
+        'id' => 1,
+        'judul'=> 'Nama Post Panjang Segini sampe bawah kalo emang panjang',
+        'slugs'=> 'Slugs-judul-bisa-sepanjang-ini-buat-url',
+        'updatedAt' => 'bebas/2007',
+        'createdAt' => 'bebas/2007',
+    ],
+    [
+        'id' => 1,
+        'judul'=> 'Nama Post Panjang Segini sampe bawah kalo emang panjang',
+        'slugs'=> 'Slugs-judul-bisa-sepanjang-ini-buat-url',
+        'updatedAt' => 'bebas/2007',
+        'createdAt' => 'bebas/2007',
     ],
 ];

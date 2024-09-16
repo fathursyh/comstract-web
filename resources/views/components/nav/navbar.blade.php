@@ -17,7 +17,7 @@
             {{-- ADMIN --}}
             {{-- @auth --}}
                 <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownUser"
-                    class="flex items-center justify-between w-full py-2 px-3 text-blue-500 rounded hover:bg-gray-100 xl:hover:bg-transparent xl:border-0 xl:hover:text-blue-700 xl:p-0 xl:w-auto dark:text-white xl:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 xl:dark:hover:bg-transparent">{{ $username?? 'Nama Panjang User' }} <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    class="flex items-center justify-between w-full py-2 px-3 text-blue-500 rounded hover:bg-gray-100 xl:hover:bg-transparent xl:border-0 xl:hover:text-blue-700 xl:p-0 xl:w-auto dark:text-white xl:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 xl:dark:hover:bg-transparent">{{ auth()->user()->name ?? 'Nama Panjang User' }} <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 4 4 4-4" />
@@ -80,7 +80,7 @@
                     @endguest
                     {{-- @auth --}}
                     <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                    class="xl:hidden flex items-center justify-between w-full py-2 px-3 text-[#00A859] rounded hover:bg-gray-100 xl:hover:bg-transparent xl:border-0 xl:hover:text-blue-700 xl:p-0 xl:w-auto dark:text-white xl:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 xl:dark:hover:bg-transparent sm:text-xl lg:text-base">{{ $username?? 'Nama Panjang User' }} <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    class="xl:hidden flex items-center justify-between w-full py-2 px-3 text-[#00A859] rounded hover:bg-gray-100 xl:hover:bg-transparent xl:border-0 xl:hover:text-blue-700 xl:p-0 xl:w-auto dark:text-white xl:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 xl:dark:hover:bg-transparent sm:text-xl lg:text-base">{{ auth()->user()->name ?? 'Nama Panjang User' }} <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 4 4 4-4" />

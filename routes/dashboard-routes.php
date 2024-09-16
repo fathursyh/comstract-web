@@ -7,6 +7,7 @@ $dev = 'guest'; // INI GANTI KALO UDAH JADII! JADI 'auth'
 Route::group(['prefix'=> 'dashboard', 'middleware' => $dev],function(){
     // ROUTES BUAT SERTIFIKASI
     Route::group(['prefix' => 'sertifikasi'],function() {
+        // PAGINATION LIMIT 6 ITEM PER PAGE
         Route::get('/', function () {
             include 'dummy.php';
             return view('dashboard/sertifikasi', [
@@ -18,7 +19,10 @@ Route::group(['prefix'=> 'dashboard', 'middleware' => $dev],function(){
     // ROUTES BUAT KEGIATAN
     Route::group(['prefix' => 'kegiatan'],function() {
         Route::get('/', function () {
-            return view('dashboard/kegiatan');
+            include 'dummy.php';
+            return view('dashboard/kegiatan', [
+                'data' => $data2
+            ]);
         });
     });
 

@@ -8,13 +8,12 @@ require_once "dashboard-routes.php";
 // HOME
 Route::get('/', function () {
     /* 
-    data['username], data['angkatan'] -> buat navbar
+    data['angkatan'] -> buat navbar
     data['chart'] -> buat chart tea
     data['posts'](limit 4 posts aja) -> buat di bagian post sebanyak admin mau
     */
     require_once 'dummy.php';
     return view('home/index', [
-        "username" => $username,
         "posts" => $posts
     ]);
 });
