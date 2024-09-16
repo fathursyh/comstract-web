@@ -15,7 +15,7 @@
     <div class="mx-auto container relative p-2 rounded-lg overflow-x-auto lg:w-4/5 mb-7">
         {{-- BUTTON --}}
         @yield('button')
-        <table class="table-fixed w-full text-sm text-left rtl:text-right text-gray-800">
+        <table class="md:table-fixed table-auto w-full text-sm text-left rtl:text-right text-gray-800">
             <thead class="text-xs lg:text-sm text-gray-700 uppercase bg-unguTipis dark:bg-gray-700 dark:text-gray-400 ">
                 <tr>
                     <th class="w-1/2 p-2 border border-gray-300 text-center">
