@@ -14,8 +14,14 @@ Route::group(['prefix'=> 'dashboard', 'middleware' => $dev],function(){
                 'data' => $data1,
             ]);
         });
+        Route::get('/tambah', function () {
+            return view('dashboard/tambah');
+        });
+        Route::get('/edit/{id}', function (string $id) {
+            return view('dashboard/edit', ['id' => $id]);
+        });
     });
-
+    
     // ROUTES BUAT KEGIATAN
     Route::group(['prefix' => 'kegiatan'],function() {
         Route::get('/', function () {
@@ -23,6 +29,12 @@ Route::group(['prefix'=> 'dashboard', 'middleware' => $dev],function(){
             return view('dashboard/kegiatan', [
                 'data' => $data2
             ]);
+        });
+        Route::get('/tambah', function () {
+            return view('dashboard/tambah');
+        });
+        Route::get('/edit/{id}', function (string $id) {
+            return view('dashboard/edit', ['id' => $id]);
         });
     });
 

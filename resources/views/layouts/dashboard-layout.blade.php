@@ -17,6 +17,6 @@
       @yield('content')
   </div>
 
-  <script src="{{ asset('js/dashboard.js') }}"></script>
+  <script src="{{ asset('js/dash.js') }}"></script>
 </body>
 </html>

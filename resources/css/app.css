@@ -11,3 +11,7 @@ nav {
 #logo-sidebar, .splide, #features, #dashboard-content {
   font-family: Poppins;
 }
+
+input::file-selector-button {
+  background-color: rgb(99, 75, 75) !important;
+}
