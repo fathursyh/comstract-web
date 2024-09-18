@@ -40,8 +40,8 @@
     <section class="w-full bg-white dark:bg-gray-800 md:pt-52 pt-28 pb-32 flex flex-col items-center shadow-lg" data-aos="fade-left"  data-aos-anchor-placement="top-center">
 
         <div class="flex justify-center items-center pb-10 lg:pb-24 md:w-1/2">
-            <h4 class="text-center text-2xl lg:text-4xl font-bold text-ungu" style="font-family: Poppins">PESERTA COMSTRACT</h4>
+            <h4 class="text-center text-2xl lg:text-4xl font-bold text-hijau" style="font-family: Poppins">GRAFIK PESERTA</h4>
         </div>
-            <div id="area-chart" class="lg:w-5/6 w-full"></div>
+            <div id="area-chart" class="lg:w-5/6 w-full shadow-md"></div>
     </section>
 @endsection

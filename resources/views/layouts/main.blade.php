@@ -21,7 +21,7 @@
         @yield('content')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="{{ asset('js/index.js') }}"></script>
+    <script src="{{ asset('js/home.js') }}"></script>
     
     @if (Request::is('/'))
         {{-- DATA CHART MASUKIN SINI --}}

@@ -44,7 +44,7 @@
             },
             {
                 name: "Batch 2",
-                color: "#00A858",
+                color: "#0cad62",
             },
             {
                 name: "Batch 3",
@@ -53,29 +53,20 @@
         ],
         chart: {
             type: "bar",
-            height: '440px',
+            height: '400px',
             width: '100%',
             fontFamily: "Inter, sans-serif",
             toolbar: {
                 show: false,
             },
         },
-        responsive: [
-          {
-            breakpoint: 600,
-            options: {
-                chart: {
-                    height: 'auto',
-                },
-            }
-          }
-        ],
         plotOptions: {
             bar: {
                 horizontal: false,
                 columnWidth: "70%",
                 borderRadiusApplication: "end",
-                borderRadius: 4,
+                borderRadius: 8,
+
             },
         },
         tooltip: {
@@ -100,8 +91,8 @@
         },
         grid: {
             row: {
-                colors: ['#fcd9df', '#ffc7d0'],
-                opacity: 1
+                colors: ['#4fe377', '#91edaa'],
+                opacity: 0.6
             },
             column: {
                 colors: ['white', 'transparent'],
@@ -125,29 +116,52 @@
         },
         legend: {
             show: true,
+            fontFamily: 'Poppins',
+            fontSize: '16px',
         },
         xaxis: {
             floating: false,
             labels: {
                 show: true,
                 style: {
-                    fontFamily: "Inter, sans-serif",
-                    cssClass: 'text-base font-bold fill-gray-500 dark:fill-gray-400'
+                    fontFamily: "Poppins",
+                    cssClass: 'text-base font-semibold fill-gray-500 dark:fill-gray-400'
                 }
             },
             axisBorder: {
-                show: false,
+                show: true,
             },
             axisTicks: {
                 show: false,
             },
         },
         yaxis: {
-            show: false,
+            show: true,
         },
         fill: {
-            opacity: 1,
+            type: 'gradient',
+            gradient: {
+                shade: 'dark',
+                type: 'vertical', // You can also use 'vertical'
+                shadeIntensity: 0.5,
+                gradientToColors: ['#6960c4', '#05a85c', '#e0d738' ], // Array of colors for the gradient
+                inverseColors: true,
+                opacityFrom: 1,
+                opacityTo: 0.8,
+                stops: [0, 50, 100]
+            }
         },
+        responsive: [{
+            breakpoint: 600,
+            options: {
+                chart: {
+                    height: 'auto',
+                },
+                legend: {
+                    fontSize: '14px',
+                },
+            }
+        }],
     }
     if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
         getChartData(); // render chart

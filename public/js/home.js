@@ -23,3 +23,11 @@ const selectedNavItem = () => {
 window.addEventListener('DOMContentLoaded', () => {
   selectedNavItem();
 });
+
+window.onbeforeunload = function () {
+    window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: 'instant',
+    });
+  }
