@@ -21,5 +21,5 @@ const selectedNavItem = () => {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-   selectedNavItem();
+  selectedNavItem();
 });

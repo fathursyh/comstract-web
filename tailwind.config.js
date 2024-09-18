@@ -25,8 +25,13 @@ module.exports = {
     },
     extend: {},
   },
+  safelist: [
+    '/^datatable-.*$/'
+  ],
   plugins: [
-      require('flowbite/plugin')
+      require('flowbite/plugin')({
+        charts: true,
+      })
   ],
 }
 

@@ -20,9 +20,16 @@
     <div class="container pt-22 max-h-max max-w-full 2xl:px-36">
         @yield('content')
     </div>
-
-    <script src="{{ asset('js/home.js') }}"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="{{ asset('js/index.js') }}"></script>
+    
+    @if (Request::is('/'))
+        {{-- DATA CHART MASUKIN SINI --}}
+        @include('components.utility.chart', [
+            'peserta' => [300, 500, 700],
+            'date' => [2018, 2019, 2020]
+        ])
+    @endif
 </body>
 
 </html>
