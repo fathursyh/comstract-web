@@ -21,3 +21,7 @@
     tahun
 @endsection
 
+@section('method')
+    $method
+@endsection
+

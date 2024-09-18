@@ -20,40 +20,35 @@ $posts = [
     'id' => 1,
     'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
     'batch'=> 1,
+    'mitra' => 'goto',
     'tahun'=> 2019,
+    'open' => 1
     ],
     [
-    'id' => 1,
+    'id' => 2,
     'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
-    'batch'=> 1,
+    'batch'=> 3,
+    'mitra' => 'goto',
     'tahun'=> 2019,
+    'open' => 0
     ],
     [
-    'id' => 1,
+    'id' => 3,
     'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
-    'batch'=> 1,
+    'batch'=> 2,
+    'mitra' => 'goto',
     'tahun'=> 2019,
+    'open' => 1
     ],
     [
-    'id' => 1,
+    'id' => 4,
     'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
-    'batch'=> 1,
+    'batch'=> 2,
+    'mitra' => 'gojek',
     'tahun'=> 2019,
+    'open' => 0
     ],
-    [
-    'id' => 1,
-    'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
-    'batch'=> 1,
-    'tahun'=> 2019,
-    ],
-    [
-    'id' => 1,
-    'nama'=> 'nama program sepanjang ini mungkin gaes kek pokoknya panjang ',
-    'batch'=> 1,
-    'tahun'=> 2019,
-    ],
-
-];
+  ];
 
 $data2 = [
     [

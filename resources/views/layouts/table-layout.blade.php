@@ -2,10 +2,7 @@
 
 @section('content')
     <?php
-    $newData = [];
-    foreach ($data as $item) {
-        $newData[] = array_values($item);
-    }
+        $sertifikasi = Request::is('dashboard/sertifikasi');
     ?>
 
     <h1 class="md:text-4xl text-3xl font-bold text-hijau mt-10 mb-14 text-center">
@@ -34,29 +31,29 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($newData as $item)
+                @foreach ($data as $item)
                     <tr class="hover:bg-gray-100">
                         <td class="p-4 border border-gray-300 cursor-pointer"
-                            onclick="changeURL('/{{ Request::is('dashboard/sertifikasi') ? 'dashboard/sertifikasi' : 'kegiatan' }}/{{ $item[0] }}')">
-                            {{ $item[1] }}
+                            onclick="changeURL('/{{ $sertifikasi ? 'dashboard/sertifikasi' : 'kegiatan' }}/{{ $item['id'] }}')">
+                            {{ $sertifikasi ? $item['nama'] : $item['judul'] }}
                         </td>
                         <td class="p-4 border border-gray-300 text-center">
-                            {{ $item[2] }}
+                            {{ $sertifikasi ? $item['batch'] : $item['slugs'] }}
                         </td>
                         <td class="p-4 border border-gray-300 text-center">
-                            {{ $item[3] }}
+                            {{ $sertifikasi ? $item['tahun'] : $item['updatedAt'] }}
                         </td>
-                        @if (isset($item[4]))
+                        @if (!$sertifikasi)
                             <td class="p-4 border border-gray-300 text-center">
-                                {{ $item[4] }}
+                                {{ $item['createdAt'] }}
                             </td>
                         @endif
                         <td class="p-4 border">
                             <div class="flex md:flex-row flex-col justify-center gap-4">
                                 {{-- URL EDIT DELETE DISINI --}}
                                 <?php 
-                                    $edit = (Request::is('dashboard/sertifikasi')) ? '/dashboard/sertifikasi/edit/'.$item[0] : '/dashboard/kegiatan/edit/'.$item[0];
-                                    $delete = (Request::is('dashboard/sertifikasi')) ? '/dashboard/sertifikasi/delete/'.$item[0] : '/dashboard/kegiatan/delete/'.$item[0];
+                                    $edit = $sertifikasi ? '/dashboard/sertifikasi/edit/'.$item['id'] : '/dashboard/kegiatan/edit/'.$item['id'];
+                                    $delete = $sertifikasi ? '/dashboard/sertifikasi/delete/'.$item['id'] : '/dashboard/kegiatan/delete/'.$item['id'];
                                 ?>
                                 @include('components.button.edit-delete', [
                                     'edit' => $edit,

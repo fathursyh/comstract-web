@@ -18,7 +18,12 @@ Route::group(['prefix'=> 'dashboard', 'middleware' => $dev],function(){
             return view('dashboard/tambah');
         });
         Route::get('/edit/{id}', function (string $id) {
-            return view('dashboard/edit', ['id' => $id]);
+            include 'dummy.php';
+            return view('dashboard/edit', [
+                'id' => $id,
+                // NANTI GANTI PAKE OBJECT YANG DIPILIH DARI DATABASE
+                'data' => $data1[$id-1],
+            ]);
         });
     });
     
@@ -34,7 +39,11 @@ Route::group(['prefix'=> 'dashboard', 'middleware' => $dev],function(){
             return view('dashboard/tambah');
         });
         Route::get('/edit/{id}', function (string $id) {
-            return view('dashboard/edit', ['id' => $id]);
+            include 'dummy.php';
+            return view('dashboard/edit', [
+                'id' => $id,
+                'data' => $data2[$id-1]
+            ]);
         });
     });
 

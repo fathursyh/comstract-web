@@ -14,7 +14,7 @@ const changeURL = (url) => {
   window.location.href = url;  
 }
 const previousPage = () => {
-  window.history.back();  
+  window.history.back();
 }
 
 window.addEventListener('DOMContentLoaded', () => {

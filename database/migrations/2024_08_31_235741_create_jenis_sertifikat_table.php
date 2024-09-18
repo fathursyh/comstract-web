@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('mitra')->nullable();
             $table->date('pelaksanaan');
             $table->string('flyer')->unique();
-            $table->boolean('open');
+            $table->boolean('open')->default(0);
 
             $table->unique(['nama', 'batch']);
         });
