@@ -1,76 +1,132 @@
 <script>
-  const peserta = <?= '["' . implode('", "', $peserta) . '"]' ?>;
-  const tahun = <?= '["' . implode('", "', $date) . '"]' ?>;
-  const options = {
-    chart: {
-      height: "100%",
-      maxWidth: "100%",
-      type: "area",
-      fontFamily: "Inter, sans-serif",
-      dropShadow: {
-        enabled: true,
+  const getChartData = () => {
+      const url = '<?= Request::url() ?>/getChartData';
+      fetch(url, {
+        method: 'GET',
+      }).then((res)=>{
+        return res.json();
+      }).then((data)=>{
+        for(let i = 0; i < 3; i++) {
+          options.series[i].data = data[i];
+        }
+        const chart = new ApexCharts(document.getElementById("area-chart"), options);
+        chart.render();
+      })
+    };
+  
+    const options = {
+    colors: ["#1A56DB", "#FDBA8C"],
+    series: [
+      {
+        name: "Batch 1",
+        color: "#7A75B4",
+        data: []
       },
+      {
+        name: "Batch 2",
+        color: "#00A858",
+        data: []
+      },
+      {
+        name: "Batch 3",
+        color: "#ebe242",
+        data: [],
+      },
+    ],
+    chart: {
+      type: "bar",
+      height: "320px",
+      width: '100%',
+      fontFamily: "Inter, sans-serif",
       toolbar: {
-        show: false,
+        show: true,
+      },
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "70%",
+        borderRadiusApplication: "end",
+        borderRadius: 4,
       },
     },
     tooltip: {
-      enabled: true,
-      x: {
-        show: false,
+      shared: true,
+      intersect: false,
+      style: {
+        fontFamily: "Poppins",
       },
     },
-    fill: {
-      type: "gradient",
-      gradient: {
-        opacityFrom: 0.55,
-        opacityTo: 0,
-        shade: "#1C64F2",
-        gradientToColors: ["#1C64F2"],
+    states: {
+      hover: {
+        filter: {
+          type: "darken",
+          value: 1,
+        },
+      },
+    },
+    stroke: {
+      show: true,
+      width: 1,
+      colors: ["#7A75B4"],
+    },
+    grid: {
+      row: {
+        colors: ['#e5e5e5', 'transparent'],
+        opacity: 0.5
+    }, 
+    column: {
+        colors: ['#f8f8f8', 'transparent'],
+    }, 
+    xaxis: {
+      lines: {
+        show: true
+      }
+    },
+      show: true,
+      borderColor: '#111',
+      strokeDashArray: 6,
+      padding: {
+        left: 2,
+        right: 2,
+        top: -14
       },
     },
     dataLabels: {
       enabled: false,
     },
-    stroke: {
-      width: 6,
+    legend: {
+      show: true,
     },
-    grid: {
-      show: false,
-      strokeDashArray: 4,
-      padding: {
-        left: 2,
-        right: 2,
-        top: 0
-      },
-    },
-    series: [
-      {
-        name: "Pendaftar",
-        data: peserta,
-        color: "#1A56DB",
-      },
-    ],
     xaxis: {
-      categories: tahun,
+      floating: false,
       labels: {
         show: true,
+        style: {
+          fontFamily: "Inter, sans-serif",
+          cssClass: 'text-base font-bold fill-gray-500 dark:fill-gray-400'
+        }
       },
       axisBorder: {
-        show: true,
+        show: false,
       },
       axisTicks: {
-        show: true,
+        show: false,
       },
     },
     yaxis: {
       show: false,
     },
+    fill: {
+      opacity: 1,
+    },
   }
-
+  
   if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
-    const chart = new ApexCharts(document.getElementById("area-chart"), options);
-    chart.render();
+    getChartData(); // render chart
   }
-</script>
-
+  
+  
+  </script>
+  
+  

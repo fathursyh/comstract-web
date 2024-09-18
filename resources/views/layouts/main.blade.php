@@ -25,10 +25,7 @@
     
     @if (Request::is('/'))
         {{-- DATA CHART MASUKIN SINI --}}
-        @include('components.utility.chart', [
-            'peserta' => [300, 500, 700],
-            'date' => [2018, 2019, 2020]
-        ])
+        @include('components.utility.chart')
     @endif
 </body>
 

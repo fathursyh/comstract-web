@@ -17,6 +17,14 @@ Route::get('/', function () {
         "posts" => $posts
     ]);
 });
+
+Route::get('/getChartData', function () {
+    require_once 'dummy.php'; // cuma dummy data
+    // tolong query data count banyak peserta dalam 3 tahun terakhir. liat di contoh dummy ya
+    return json_encode($chart);
+    
+
+});
 Route::get('/kegiatan', function () {
     return view('home/kegiatan');
 });
