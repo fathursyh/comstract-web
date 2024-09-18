@@ -55,11 +55,11 @@ $posts = [
     ],
     [
         'url' => asset('assets/stok.png'),
-        'link' => '/dashboard'
+        'link' => '/'
     ],
     [
         'url' => asset('assets/stok.png'),
-        'link' => '/login'
+        'link' => '/'
     ],
 ];
 
