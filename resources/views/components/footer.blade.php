@@ -1,6 +1,6 @@
 <footer class="min-h-72 w-full bg-ungu p-4 mt-32 relative bottom-0" style="font-family: Poppins">
     <div class="mx-auto w-full max-w-screen-xl">
-        <div class="grid grid-cols-2 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div class="grid grid-cols-2 px-4 py-6 lg:py-8 md:grid-cols-4 xl:max-2xl:w-[80%] mx-auto">
           <div>
               <h2 class="mb-3 text-lg opacity-80 font-normal text-white uppercase dark:text-white">COMSTRACT</h2>
               <ul class="text-white font-normal" style="font-family: Signika">
