@@ -28,6 +28,6 @@ window.onbeforeunload = function () {
     window.scrollTo({
         left: 0,
         top: 0,
-        behavior: 'instant',
+        behavior: 'smooth',
     });
   }

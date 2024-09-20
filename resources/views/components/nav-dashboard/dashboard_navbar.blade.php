@@ -16,7 +16,7 @@
         </a>
       </li>
         <li>
-           <a data-nav="" href="/dashboard/sertifikasi" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group">
+           <a data-nav="sertifikasi" href="/dashboard/sertifikasi" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group">
               <img class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true"
               src="{{ asset('assets/dash/sertifikasi.png') }}">
               <span class="ms-3">Sertifikasi</span>

@@ -8,8 +8,7 @@ require_once "dashboard-routes.php";
 // HOME
 Route::get('/', function () {
     /* 
-    data['angkatan'] -> buat navbar
-    data['chart'] -> buat chart tea
+    data angkatan -> buat navbar
     data['posts'](limit 4 posts aja) -> buat di bagian post sebanyak admin mau
     */
     require_once 'dummy.php';

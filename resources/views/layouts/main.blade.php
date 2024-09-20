@@ -16,12 +16,18 @@
 <body>
     {{-- NAVBAR --}}
     @include('components.nav.navbar')
+    <main class="min-h-[24.2rem]">
+        <div class="container pt-22 max-h-max max-w-full 2xl:px-36">
+            @yield('content')
+        </div>
+    </main>
+    
+    @if ((Str::substr($_SERVER['REQUEST_URI'], 1, 12) !== 'data-peserta'))
+        @include('components.footer')
+    @endif
 
-    <div class="container pt-22 max-h-max max-w-full 2xl:px-36">
-        @yield('content')
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/index.js') }}"></script>
     
     @if (Request::is('/'))
         {{-- DATA CHART MASUKIN SINI --}}
