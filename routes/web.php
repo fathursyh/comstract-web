@@ -18,9 +18,10 @@ Route::get('/', function () {
 });
 
 
-
 Route::get('/kegiatan', function () {
-    return view('home/kegiatan');
+    // PAGINATION LIMIT 8 POSTS
+    // KASIH DATA POSTS KESINI SORT DARI DATE PALING BARU
+    return view('home/kegiatan', []);
 });
 Route::get('/tentang-kami', function () {
     return view('home/profile');

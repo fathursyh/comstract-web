@@ -46,7 +46,6 @@
     </section>
     
     {{-- SHORT PROFILE --}}
-
     <section class="flex flex-col items-center justify-center w-full max-h-max px-8 md:py-28 py-8 md:gap-28 gap-14 overflow-y-hidden" style="font-family: Poppins">
         <img src="{{ asset('assets/logo.png') }}" alt="" class="w-80 md:w-96" data-aos="fade-up">
         <div class="flex flex-col gap-5 lg:px-32" data-aos="fade-up">
