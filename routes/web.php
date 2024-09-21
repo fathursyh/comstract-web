@@ -23,6 +23,10 @@ Route::get('/kegiatan', function () {
     // KASIH DATA POSTS KESINI SORT DARI DATE PALING BARU
     return view('home/kegiatan', []);
 });
+Route::get('/kegiatan/{slug}', function () {
+    return view('home/kegiatan-detail', []);
+});
+
 Route::get('/tentang-kami', function () {
     return view('home/profile');
 });
