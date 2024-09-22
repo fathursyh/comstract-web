@@ -3,7 +3,7 @@
 @section('content')
 
     {{-- HERO --}}
-    {{-- <section class="splide">
+    <section class="splide">
         <div class="splide__track md:h-[100dvh] h-[42rem]">
             <div class="z-10 bg-gradient-to-r from-black via-neutral-950 absolute w-full h-full opacity-95">
                 <div class="px-4 mx-auto w-full h-full text-center py-24 lg:py-56 flex flex-col justify-end">
@@ -31,7 +31,7 @@
                 @endforeach
             </ul>
         </div>
-    </section> --}}
+    </section>
 
     {{-- FEATURES --}}
     <section aria-label="features" id="features"

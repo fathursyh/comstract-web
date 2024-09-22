@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+require_once "auth-routes.php";
+require_once "dashboard-routes.php";
 
 Route::get('/', function () {
     /* 
