@@ -24,7 +24,10 @@ Route::get('/kegiatan', function () {
     return view('home/kegiatan', []);
 });
 Route::get('/kegiatan/{slug}', function () {
-    return view('home/kegiatan-detail', []);
+    require_once 'dummy.php';
+    return view('home/kegiatan-detail', [
+        'body' => $body,
+    ]);
 });
 
 Route::get('/tentang-kami', function () {

@@ -3,6 +3,7 @@
       <img class="rounded-t-lg" src="{{ $data['img'] ?? asset('assets/stok.png') }}" alt="" />
   </a>
   <div class="p-5">
+    <p class="text-blue-700 opacity-75 font-medium text-sm" style="font-family: Poppins">{{ $data['date']?? '07-10-2024' }}</p>
       <a href="{{ $data['link'] ?? '/kegiatan/slugs-url-mantap' }}">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
       </a>

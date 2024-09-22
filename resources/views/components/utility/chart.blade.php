@@ -65,7 +65,7 @@
                 horizontal: false,
                 columnWidth: "70%",
                 borderRadiusApplication: "end",
-                borderRadius: 8,
+                borderRadius: 4,
 
             },
         },
@@ -137,19 +137,6 @@
         },
         yaxis: {
             show: true,
-        },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shade: 'dark',
-                type: 'vertical', // You can also use 'vertical'
-                shadeIntensity: 0.5,
-                gradientToColors: ['#6960c4', '#05a85c', '#e0d738' ], // Array of colors for the gradient
-                inverseColors: true,
-                opacityFrom: 1,
-                opacityTo: 0.8,
-                stops: [0, 50, 100]
-            }
         },
         responsive: [{
             breakpoint: 600,
