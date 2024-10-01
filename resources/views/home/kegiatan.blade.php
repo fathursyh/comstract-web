@@ -7,7 +7,7 @@
         </h1>
             {{-- LiMIT 8 POSTS --}}
         <div class="grid xl:grid-cols-4 md:grid-cols-2 gap-x-4 gap-y-10 w-full py-4 place-items-center">
-            @foreach ($collection ?? ['', '', '', '', '', '', ''] as $item)
+            @foreach ($posts ?? ['', '', '', '', '', '', ''] as $post)
                 @include('components.cards.card', [
                     'data' => '',
                 ])

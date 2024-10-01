@@ -1,6 +1,9 @@
 ROUTING
 
+SEMUA PAGE YANG ADA DI NAVIGASI HOME (LOGIN/REGISTER TERMASUK) BUTUH DATA DINAMIS BUAT DROPDOWN YANG TAHUN ANGKATAN. MUNGKIN BISA TAMBAHIN DI CONTROLLER HOME
+
 {HOMEPAGE}
+
 1. '/' => home/index.blade.php =[
   '$posts' => hasil query, posts butuh id, judul post, dan gambar. limit 6
 ]
@@ -12,3 +15,16 @@ ROUTING
 3. '/fetchPeserta' => no view = [
   $data => hasil query peserta, butuh id dan nama aja buat search
 ] <<-- METHOD : POST
+
+
+********************************************************************************
+
+{KEGIATAN}
+
+1. '/kegiatan => home.kegiatan.blade.php = [
+  $posts = hasil query posts select * from posts order by tanggal baru limit 8 data per page
+] <<-- METHOD : GET
+
+2. '/kegiatan/{slug}' => home.kegiatan-detail.blade.php = [
+  $post = hasil query buat post berdasarkan slug yang dipilih, select * aja
+] <<-- METHOD : GET

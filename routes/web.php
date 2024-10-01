@@ -45,6 +45,7 @@ Route::get('/getChartData', function () {
     // tolong query data count banyak peserta dalam 3 tahun terakhir. format json ya, soalnya chart nya pake js
     return json_encode($chart);
 });
+// FETCHING USER FOR SEARCH BAR
 Route::post('/fetchPeserta', function (Request $request) {
     $search = $request->input('search');
     return json_encode(
@@ -93,7 +94,6 @@ Route::group(['middleware' => $dev], function () {
             'data' => $data2[$id - 1]
         ]);
     });
-
 
     // ROUTES BUAT PROFILE COMSTRACT YANG BISA DIEDIT
     Route::get('/dashboard/profile', function () {
