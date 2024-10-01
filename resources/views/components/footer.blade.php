@@ -22,13 +22,13 @@
               <h2 class="mb-3 text-lg opacity-80 font-normal text-white uppercase dark:text-white">HUBUNGI KAMI</h2>
               <ul class="text-white font-normal" style="font-family: Signika">
                   <li class="mb-4">
-                      <a class="hover:underline">+62 180 808 080</a>
+                      <a class="">+62 180 808 080</a>
                   </li>
                   <li class="mb-4">
-                      <a class="hover:underline">comstract@gmail.com</a>
+                      <a class="">comstract@gmail.com</a>
                   </li>
                   <li class="mb-4">
-                      <a class="hover:underline">Senin-Jum'at</a>
+                      <a class="">Senin-Jum'at</a>
                   </li>
               </ul>
           </div>

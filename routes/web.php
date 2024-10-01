@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-require_once "auth-routes.php";
-require_once "dashboard-routes.php";
+
 
 Route::get('/', function () {
     /* 
@@ -33,9 +33,9 @@ Route::get('/tentang-kami', function () {
 
 // KALO BISA CUSTOM CONTROLLER YA BIAR ENAK
 // Route::middleware('auth')->group(function(){
-    Route::get('/data-peserta/{tahun}', function () {
-        return view('home/peserta');
-    })->name('data-peserta');
+Route::get('/data-peserta/{tahun}', function () {
+    return view('home/peserta');
+})->name('data-peserta');
 // });
 
 
@@ -44,4 +44,76 @@ Route::get('/getChartData', function () {
     require_once 'dummy.php'; // cuma dummy data
     // tolong query data count banyak peserta dalam 3 tahun terakhir. format json ya, soalnya chart nya pake js
     return json_encode($chart);
+});
+Route::post('/fetchPeserta', function (Request $request) {
+    $search = $request->input('search');
+    return json_encode(
+        []
+    );
+});
+
+
+// DASHBOARD-ROUTES
+// ADMIN ONLY ACCESS
+$dev = 'guest'; // INI GANTI KALO UDAH JADII! JADI 'auth'
+Route::group(['middleware' => $dev], function () {
+    Route::get('/dashboard/sertifikasi', function () {
+        include 'dummy.php';
+        return view('dashboard/sertifikasi', [
+            'data' => $data1,
+        ]);
+    });
+    Route::get('/dashboard/sertifikasi/tambah', function () {
+        return view('dashboard/tambah');
+    });
+    Route::get('/dashboard/sertifikasi/edit/{id}', function (string $id) {
+        include 'dummy.php';
+        return view('dashboard/edit', [
+            'id' => $id,
+            // NANTI GANTI PAKE OBJECT YANG DIPILIH DARI DATABASE
+            'data' => $data1[$id - 1],
+        ]);
+    });
+
+
+    // ROUTES BUAT KEGIATAN
+    Route::get('/dashboard/kegiatan', function () {
+        include 'dummy.php';
+        return view('dashboard/kegiatan', [
+            'data' => $data2
+        ]);
+    });
+    Route::get('/dashboard/kegiatan/tambah', function () {
+        return view('dashboard/tambah');
+    });
+    Route::get('/dashboard/kegiatan/edit/{id}', function (string $id) {
+        include 'dummy.php';
+        return view('dashboard/edit', [
+            'id' => $id,
+            'data' => $data2[$id - 1]
+        ]);
+    });
+
+
+    // ROUTES BUAT PROFILE COMSTRACT YANG BISA DIEDIT
+    Route::get('/dashboard/profile', function () {
+        return view('dashboard/profile');
+    });
+});
+
+
+
+// AUTH-ROUTES
+Route::middleware('guest')->group(function () {
+    // LOGIN PAGE
+    Route::get('/login', function () {
+        return view('login/index');
+    })->name('login');
+
+    // ******************************************************
+
+    // REGISTER PAGE
+    Route::get('/register', function () {
+        return view('register/index');
+    })->name('register');
 });

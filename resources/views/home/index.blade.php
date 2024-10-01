@@ -1,14 +1,14 @@
 @extends('layouts.main')
 
 @section('content')
-
     {{-- HERO --}}
+    @include('components.forms.search-modal')
     <section class="splide">
         <div class="splide__track md:h-[100dvh] h-[42rem]">
             <div class="z-10 bg-gradient-to-r from-black via-neutral-950 absolute w-full h-full opacity-95">
-                <div class="px-4 mx-auto w-full h-full text-center py-24 lg:py-56 flex flex-col justify-end">
-                    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Pelatihan sertifikasi bidang informatika</h1>
-                    <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48" style="text-shadow: 2px 2px rgb(67, 67, 67)">Kami berfokus pada pelatihan sertifikasi dengan bekerjasama dengan berbagai mitra penyelenggara sertifikasi informatika</p>
+                <div class="px-4 mx-auto w-full h-full text-center py-24 lg:py-56 flex flex-col justify-end" style="background-color: rgba(0, 0, 0, 0.435)">
+                    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl lg:px-[20%]">Pelatihan sertifikasi bidang informatika</h1>
+                    <p class="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 lg:px-48">"Kami berfokus pada pelatihan sertifikasi dan telah bekerja sama dengan berbagai mitra penyelenggara sertifikasi informatika"</p>
                     <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                         <a href="/daftar-peserta" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-purple-500 hover:bg-purple-600">
                             Daftar Sertifikasi
@@ -16,9 +16,9 @@
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                            Pelajari lebih lanjut
-                        </a>  
+                        <button data-modal-target="search-modal" data-modal-toggle="search-modal" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                            Cari Nama Peserta
+                        </button>  
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
     {{-- CHARTS --}}
     <section class="w-full bg-white dark:bg-gray-800 md:pt-52 pt-28 pb-32 flex flex-col items-center 2xl:shadow" data-aos="fade-up"  data-aos-anchor-placement="top-center">
 
-        <div class="flex justify-center items-center pb-10 lg:pb-24 md:w-1/2">
+        <div class="flex justify-center items-center pb-10 lg:pb-14 md:w-1/2">
             <h4 class="text-center text-2xl md:text-4xl font-bold text-hijau" style="font-family: Poppins">GRAFIK PESERTA</h4>
         </div>
             <div id="area-chart" class="lg:w-5/6 w-full shadow-md"></div>

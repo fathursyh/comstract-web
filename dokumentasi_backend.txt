@@ -1,0 +1,14 @@
+ROUTING
+
+{HOMEPAGE}
+1. '/' => home/index.blade.php =[
+  '$posts' => hasil query, posts butuh id, judul post, dan gambar. limit 6
+]
+
+2. '/getChartData' => no view = [
+  $data => hasil query, 3 tahun terakhir, struktur ada di dummy.php. 
+] <<-- METHOD : GET
+
+3. '/fetchPeserta' => no view = [
+  $data => hasil query peserta, butuh id dan nama aja buat search
+] <<-- METHOD : POST

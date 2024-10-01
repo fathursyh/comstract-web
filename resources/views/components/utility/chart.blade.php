@@ -53,7 +53,7 @@
         ],
         chart: {
             type: "bar",
-            height: '400px',
+            height: '360px',
             width: '100%',
             fontFamily: "Inter, sans-serif",
             toolbar: {
