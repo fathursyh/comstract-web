@@ -18,7 +18,7 @@
     {{-- NAVBAR --}}
     @include('components.nav.navbar')
     <main class="min-h-[24.2rem]">
-        <div class="container pt-22 max-h-max max-w-full 2xl:px-36">
+        <div class="container pt-[5rem] max-h-max max-w-full 2xl:px-36">
             @yield('content')
         </div>
     </main>
@@ -28,7 +28,7 @@
     @endif
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="{{ asset('js/index.js') }}"></script>
+    <script src="{{ asset('js/home.js') }}"></script>
 
     <script>
         document.querySelector('[data-modal-toggle="search-modal"]').addEventListener('click', function() {

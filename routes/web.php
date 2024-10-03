@@ -58,11 +58,15 @@ Route::post('/fetchPeserta', function (Request $request) {
 // ADMIN ONLY ACCESS
 $dev = 'guest'; // INI GANTI KALO UDAH JADII! JADI 'auth'
 Route::group(['middleware' => $dev], function () {
+    // ROUTES SERTIFIKASI
     Route::get('/dashboard/sertifikasi', function () {
         include 'dummy.php';
         return view('dashboard/sertifikasi', [
             'data' => $data1,
         ]);
+    });
+    Route::get('/dashboard/sertifikasi/{id}', function() {
+        return view('dashboard/detail');
     });
     Route::get('/dashboard/sertifikasi/tambah', function () {
         return view('dashboard/tambah');

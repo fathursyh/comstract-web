@@ -28,3 +28,13 @@ SEMUA PAGE YANG ADA DI NAVIGASI HOME (LOGIN/REGISTER TERMASUK) BUTUH DATA DINAMI
 2. '/kegiatan/{slug}' => home.kegiatan-detail.blade.php = [
   $post = hasil query buat post berdasarkan slug yang dipilih, select * aja
 ] <<-- METHOD : GET
+
+
+********************************************************************************
+
+{DATA PESERTA}
+
+1. '/data-peserta/{tahun}' => home.data-peserta = [
+  $angkatan = sesuai data angkatan yg dipilih (mungkin bisa dari url parameter atau kalian mau pake url query bebas)
+  $data_peserta = hasil query data peserta mahasiswa unpak yang ikut sertifikasi sesuai tahun, sort by npm ASC
+] <<-- METHOD : GET

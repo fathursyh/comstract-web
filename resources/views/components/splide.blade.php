@@ -16,7 +16,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         speed: 2600,
         preloadPages: 3,
         easing: 'ease',
-        pagination: true,
+        pagination: false,
         drag: false,
       });
       splide.mount();
