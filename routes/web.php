@@ -66,7 +66,7 @@ Route::group(['middleware' => $dev], function () {
         ]);
     });
     Route::get('/dashboard/sertifikasi/{id}', function() {
-        return view('dashboard/detail');
+        return view('dashboard/sub-menu-sertifikasi');
     });
     Route::get('/dashboard/sertifikasi/tambah', function () {
         return view('dashboard/tambah');

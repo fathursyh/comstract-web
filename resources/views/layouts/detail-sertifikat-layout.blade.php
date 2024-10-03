@@ -7,6 +7,9 @@
       @include('components.nav.breadcrumbs', [
         'first_menu' => ['sertifikasi', '/dashboard/sertifikasi'],
         'second_menu' => ['kategori', ''],
+        'third_menu' => $third_menu ?? null
       ])
+      
+      @yield('content-sertifikasi')
     </div>
 @endsection
