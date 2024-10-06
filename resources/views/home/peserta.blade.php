@@ -6,7 +6,7 @@
             {{ $angkatan ?? '20XX' }}
         </h1>
         <div class="container mx-auto lg:w-[95%] 2xl:w-3/4">
-            <table class="md:table-fixed table-auto w-full text-sm text-left rtl:text-right text-gray-800">
+            <table class="md:table-fixed table-auto w-full text-sm text-center rtl:text-right text-gray-800">
                 <thead class="text-xs lg:text-sm text-gray-700 uppercase bg-unguTipis dark:bg-gray-700 dark:text-gray-400 ">
                     <tr>
                         <th class="w-1/6 p-2 border border-gray-300 text-center">No</th>
@@ -25,10 +25,10 @@
                             <td class="p-4 border border-gray-300 cursor-pointer">
                                 {{ $peserta->npm ?? '06512424242' }}
                             </td>
-                            <td class="p-4 border border-gray-300 cursor-pointer">
+                            <td class="p-4 border border-gray-300 cursor-pointer text-left">
                                 {{ $peserta->nama ?? 'Naufal Alwi Pratama' }}
                             </td>
-                            <td class="text-center p-4 border border-gray-300 cursor-pointer {{ ($peserta->jumlah ?? 0 == 2)?  'bg-red-200' : 'bg-green-200' }}">
+                            <td class="p-4 border border-gray-300 cursor-pointer {{ ($peserta->jumlah ?? 0 == 2)?  'bg-red-200' : 'bg-green-200' }}">
                                 {{ $peserta->jumlah ?? 0 }}
                             </td>
                             <td class="p-4 border border-gray-300 cursor-pointer">

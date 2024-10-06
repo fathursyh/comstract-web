@@ -34,7 +34,7 @@
                 @foreach ($data as $item)
                     <tr class="hover:bg-gray-100">
                         <td class="p-4 border border-gray-300 cursor-pointer"
-                            onclick="changeURL('/{{ $sertifikasi ? 'dashboard/sertifikasi' : 'kegiatan' }}/{{ $item['id'] }}')">
+                            onclick="changeURL('/{{ $sertifikasi ? 'dashboard/sertifikasi/detail' : 'kegiatan' }}/{{ $item['id'] }}')">
                             {{ $sertifikasi ? $item['nama'] : $item['judul'] }}
                         </td>
                         <td class="p-4 border border-gray-300 text-center">

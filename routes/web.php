@@ -65,9 +65,18 @@ Route::group(['middleware' => $dev], function () {
             'data' => $data1,
         ]);
     });
-    Route::get('/dashboard/sertifikasi/{id}', function() {
-        return view('dashboard/sub-menu-sertifikasi');
+
+    Route::get('/dashboard/sertifikasi/detail/{id}', function(Request $request) {
+        $request = $request->query('peserta');
+        if($request === 'mahasiswa') {
+            return view('dashboard/detail_mahasiswa');
+        } else if ($request === 'umum') {
+            return view('dashboard/detail_umum');
+        } else {
+            return view('dashboard/sub-menu-sertifikasi');
+        }
     });
+
     Route::get('/dashboard/sertifikasi/tambah', function () {
         return view('dashboard/tambah');
     });
