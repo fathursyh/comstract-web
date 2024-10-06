@@ -38,3 +38,16 @@ SEMUA PAGE YANG ADA DI NAVIGASI HOME (LOGIN/REGISTER TERMASUK) BUTUH DATA DINAMI
   $angkatan = sesuai data angkatan yg dipilih (mungkin bisa dari url parameter atau kalian mau pake url query bebas)
   $data_peserta = hasil query data peserta mahasiswa unpak yang ikut sertifikasi sesuai tahun, sort by npm ASC
 ] <<-- METHOD : GET
+
+
+********************************************************************************
+
+{DASHBOARD -> SERTIFIKASI}
+
+1. '/dashboard/sertifikasi/detail/{id}?peserta=mahasiswa' => dashboard.detail_mahasiswa = [
+  $data = hasil query data peserta dimana pake npm dan gabungin sama table sertifikat untuk tau dia statusnya lulus atau ngga.
+  
+  $data => $peserta->npm, $peserta->nama, $peserta->kelamin, $peserta->email, $peserta->status
+
+  $id_sertifikat = id dari sertifikat yg dipilih
+] <<-- METHOD : GET 

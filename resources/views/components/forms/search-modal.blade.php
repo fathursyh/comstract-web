@@ -18,7 +18,7 @@
           <div class="p-4 space-y-4 md:px-20 md:py-10">
             <form action="" method="POST">
               @csrf
-              <input type="search" autocomplete="off" name="search" placeholder="Nama peserta" id="search" class="w-full" data-autofocus>
+              <input type="search" autocomplete="off" name="search" placeholder="Nama lengkap peserta" id="search" class="w-full" data-autofocus>
               <br>
               <ul class="mt-4 w-48 text-sm font-medium text-gray-900" id="listSearch">
               </ul>

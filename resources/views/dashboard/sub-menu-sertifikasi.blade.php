@@ -1,7 +1,7 @@
 @extends('layouts.detail-sertifikat-layout')
 
 @section('content-sertifikasi')
-    <div class="h-full flex justify-center items-center">
+    <div class="h-full flex justify-center items-center">   
         @php
             $id = $sertifikasi->id ?? 1;
         @endphp

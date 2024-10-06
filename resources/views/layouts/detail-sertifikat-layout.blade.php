@@ -8,7 +8,7 @@
     <div class="mx-auto container relative p-2 overflow-x-auto lg:w-[95%] 2xl:w-3/4 mb-7">
       @include('components.nav.breadcrumbs', [
         'first_menu' => ['sertifikasi', '/dashboard/sertifikasi'],
-        'second_menu' => ['kategori', "/dashboard/sertifikasi/detail/$sertifikasi"],
+        'second_menu' => ['detail', "/dashboard/sertifikasi/detail/$sertifikasi"],
         'third_menu' => $third_menu ?? null
       ])
       <div class="h-[60vh]">
