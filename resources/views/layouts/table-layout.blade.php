@@ -58,6 +58,7 @@
                                 @include('components.button.edit-delete', [
                                     'edit' => $edit,
                                     'delete' => $delete,
+                                    'id' => $iitem['id'],
                                 ])
                             </div>
                         </td>
